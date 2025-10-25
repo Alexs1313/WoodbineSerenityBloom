@@ -9,8 +9,21 @@
 /* Begin PBXBuildFile section */
 		0C80B921A6F3F58F76C31292 /* libPods-WoodbineSerenityBloom.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-WoodbineSerenityBloom.a */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		3B9C27827B214509A4842295 /* Sansation-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7ACE5527DAB4A92913AF142 /* Sansation-Light.ttf */; };
+		4217E73E4F2B461CA736785C /* Sansation-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C604F938FF534C25B649D9A4 /* Sansation-LightItalic.ttf */; };
+		6A3D49B29B164DD3B1AADB41 /* Sansation-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B43A1E16AC8B4AC483E8A6A8 /* Sansation-Bold.ttf */; };
+		73D4567854CD40A480DAAE2D /* Sansation-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C150842311D04B9E9435F93D /* Sansation-Regular.ttf */; };
+		74BF2FD8BFF041608446AA6E /* Sansation-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 720291B79908448281311321 /* Sansation-BoldItalic.ttf */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		9847B1F7F480472AAD70279B /* Sansation-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7E32A92E0CE4B73B6292E09 /* Sansation-Italic.ttf */; };
+		D154A2AB2EAB6AC6000C4E61 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D154A2AA2EAB6AC6000C4E61 /* AVKit.framework */; };
+		D154A2AD2EAB6ACD000C4E61 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D154A2AC2EAB6ACD000C4E61 /* AVFoundation.framework */; };
+		D154A2AF2EAB6AD3000C4E61 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D154A2AE2EAB6AD3000C4E61 /* AudioToolbox.framework */; };
+		D154A2B12EABA017000C4E61 /* morning-dew-melodies-beautiful-background-music-for-video-244788.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D154A2B02EABA017000C4E61 /* morning-dew-melodies-beautiful-background-music-for-video-244788.mp3 */; };
+		D154A2B32EABA01D000C4E61 /* relaxing-145038.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D154A2B22EABA01D000C4E61 /* relaxing-145038.mp3 */; };
+		D154A2B52EABA023000C4E61 /* liquid-soundscape-relaxation-369760.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D154A2B42EABA023000C4E61 /* liquid-soundscape-relaxation-369760.mp3 */; };
+		D154A2B72EABA028000C4E61 /* warm-ambient-music-for-sunset-moments-342441.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D154A2B62EABA028000C4E61 /* warm-ambient-music-for-sunset-moments-342441.mp3 */; };
 		FB3FEA9B52CCE40FD59DDEE0 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
 /* End PBXBuildFile section */
 
@@ -22,8 +35,21 @@
 		3B4392A12AC88292D35C810B /* Pods-WoodbineSerenityBloom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WoodbineSerenityBloom.debug.xcconfig"; path = "Target Support Files/Pods-WoodbineSerenityBloom/Pods-WoodbineSerenityBloom.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-WoodbineSerenityBloom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WoodbineSerenityBloom.release.xcconfig"; path = "Target Support Files/Pods-WoodbineSerenityBloom/Pods-WoodbineSerenityBloom.release.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-WoodbineSerenityBloom.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WoodbineSerenityBloom.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		720291B79908448281311321 /* Sansation-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Sansation-BoldItalic.ttf"; path = "../assets/fonts/Sansation-BoldItalic.ttf"; sourceTree = "<group>"; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = WoodbineSerenityBloom/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = WoodbineSerenityBloom/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B43A1E16AC8B4AC483E8A6A8 /* Sansation-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Sansation-Bold.ttf"; path = "../assets/fonts/Sansation-Bold.ttf"; sourceTree = "<group>"; };
+		B7E32A92E0CE4B73B6292E09 /* Sansation-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Sansation-Italic.ttf"; path = "../assets/fonts/Sansation-Italic.ttf"; sourceTree = "<group>"; };
+		C150842311D04B9E9435F93D /* Sansation-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Sansation-Regular.ttf"; path = "../assets/fonts/Sansation-Regular.ttf"; sourceTree = "<group>"; };
+		C604F938FF534C25B649D9A4 /* Sansation-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Sansation-LightItalic.ttf"; path = "../assets/fonts/Sansation-LightItalic.ttf"; sourceTree = "<group>"; };
+		D154A2AA2EAB6AC6000C4E61 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		D154A2AC2EAB6ACD000C4E61 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D154A2AE2EAB6AD3000C4E61 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D154A2B02EABA017000C4E61 /* morning-dew-melodies-beautiful-background-music-for-video-244788.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "morning-dew-melodies-beautiful-background-music-for-video-244788.mp3"; sourceTree = "<group>"; };
+		D154A2B22EABA01D000C4E61 /* relaxing-145038.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "relaxing-145038.mp3"; sourceTree = "<group>"; };
+		D154A2B42EABA023000C4E61 /* liquid-soundscape-relaxation-369760.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "liquid-soundscape-relaxation-369760.mp3"; sourceTree = "<group>"; };
+		D154A2B62EABA028000C4E61 /* warm-ambient-music-for-sunset-moments-342441.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "warm-ambient-music-for-sunset-moments-342441.mp3"; sourceTree = "<group>"; };
+		E7ACE5527DAB4A92913AF142 /* Sansation-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Sansation-Light.ttf"; path = "../assets/fonts/Sansation-Light.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -32,6 +58,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D154A2AF2EAB6AD3000C4E61 /* AudioToolbox.framework in Frameworks */,
+				D154A2AD2EAB6ACD000C4E61 /* AVFoundation.framework in Frameworks */,
+				D154A2AB2EAB6AC6000C4E61 /* AVKit.framework in Frameworks */,
 				0C80B921A6F3F58F76C31292 /* libPods-WoodbineSerenityBloom.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -54,6 +83,9 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D154A2AE2EAB6AD3000C4E61 /* AudioToolbox.framework */,
+				D154A2AC2EAB6ACD000C4E61 /* AVFoundation.framework */,
+				D154A2AA2EAB6AC6000C4E61 /* AVKit.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				5DCACB8F33CDC322A6C60F78 /* libPods-WoodbineSerenityBloom.a */,
 			);
@@ -75,6 +107,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				DD4C43949D064749963C01FB /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -96,6 +129,23 @@
 				5709B34CF0A7D63546082F79 /* Pods-WoodbineSerenityBloom.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		DD4C43949D064749963C01FB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D154A2B22EABA01D000C4E61 /* relaxing-145038.mp3 */,
+				B43A1E16AC8B4AC483E8A6A8 /* Sansation-Bold.ttf */,
+				720291B79908448281311321 /* Sansation-BoldItalic.ttf */,
+				B7E32A92E0CE4B73B6292E09 /* Sansation-Italic.ttf */,
+				E7ACE5527DAB4A92913AF142 /* Sansation-Light.ttf */,
+				C604F938FF534C25B649D9A4 /* Sansation-LightItalic.ttf */,
+				C150842311D04B9E9435F93D /* Sansation-Regular.ttf */,
+				D154A2B02EABA017000C4E61 /* morning-dew-melodies-beautiful-background-music-for-video-244788.mp3 */,
+				D154A2B42EABA023000C4E61 /* liquid-soundscape-relaxation-369760.mp3 */,
+				D154A2B62EABA028000C4E61 /* warm-ambient-music-for-sunset-moments-342441.mp3 */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +211,16 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				FB3FEA9B52CCE40FD59DDEE0 /* PrivacyInfo.xcprivacy in Resources */,
+				6A3D49B29B164DD3B1AADB41 /* Sansation-Bold.ttf in Resources */,
+				74BF2FD8BFF041608446AA6E /* Sansation-BoldItalic.ttf in Resources */,
+				9847B1F7F480472AAD70279B /* Sansation-Italic.ttf in Resources */,
+				3B9C27827B214509A4842295 /* Sansation-Light.ttf in Resources */,
+				D154A2B32EABA01D000C4E61 /* relaxing-145038.mp3 in Resources */,
+				4217E73E4F2B461CA736785C /* Sansation-LightItalic.ttf in Resources */,
+				73D4567854CD40A480DAAE2D /* Sansation-Regular.ttf in Resources */,
+				D154A2B12EABA017000C4E61 /* morning-dew-melodies-beautiful-background-music-for-video-244788.mp3 in Resources */,
+				D154A2B52EABA023000C4E61 /* liquid-soundscape-relaxation-369760.mp3 in Resources */,
+				D154A2B72EABA028000C4E61 /* warm-ambient-music-for-sunset-moments-342441.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

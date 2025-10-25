@@ -1,28 +1,27 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+import { NavigationContainer } from '@react-navigation/native';
+import Toast from 'react-native-toast-message';
+import { ContextProvider } from './serenitybloomSrc/serenitybloomst/serenitybloomctxt';
+import SerenityBloomLoader from './serenitybloomSrc/serenitybloomcp/SerenityBloomLoader';
+import { useEffect, useState } from 'react';
+import SenerityBloomStack from './serenitybloomSrc/serenitybloomnv/SenerityBloomStack';
 
-import { NewAppScreen } from '@react-native/new-app-screen';
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
+const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
 
-function App() {
-  const isDarkMode = useColorScheme() === 'dark';
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 5300);
+  }, []);
 
   return (
-    <View style={styles.container}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <NewAppScreen templateFileName="App.tsx" />
-    </View>
+    <NavigationContainer>
+      <ContextProvider>
+        {isLoading ? <SerenityBloomLoader /> : <SenerityBloomStack />}
+        <Toast position="top" topOffset={50} />
+      </ContextProvider>
+    </NavigationContainer>
   );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
+};
 
 export default App;
