@@ -225,16 +225,21 @@ const SenerityBloomHome = () => {
         </View>
         <View
           style={[
-            styles.serenityBloomWelcCont,
-            { paddingBottom: 14, marginTop: 17, marginBottom: 12 },
+            styles.serenityStarCont,
+            {
+              marginTop: 17,
+              marginBottom: 12,
+            },
           ]}
         >
-          <Image source={mood.img} />
-          <View>
-            <Text style={styles.serenityBloomWelcTitle}>
+          <Image source={mood.img} style={{ position: 'absolute', left: 10 }} />
+          <View style={{ alignItems: 'center', width: '98%' }}>
+            <Text style={styles.serenityBloomWelcStarTitle}>
               {mood.description}
             </Text>
-            <Text style={styles.serenityBloomWelcSubtitle}>{mood.advice}</Text>
+            <Text style={styles.serenityBloomWelcStarSubtitle}>
+              {mood.advice}
+            </Text>
           </View>
         </View>
 
@@ -340,6 +345,19 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     gap: 5,
   },
+  serenityStarCont: {
+    width: '90%',
+    backgroundColor: 'rgba(0, 0, 0, 0.7)',
+    borderRadius: 22,
+    padding: 16,
+    borderWidth: 1,
+    borderColor: 'rgba(255, 255, 255, 0.25)',
+    alignSelf: 'center',
+    alignItems: 'center',
+    flexDirection: 'row',
+
+    gap: 8,
+  },
   serenityBloomBtnText: {
     color: '#FFFFFF',
     fontSize: 18,
@@ -348,6 +366,14 @@ const styles = StyleSheet.create({
   serenityBloomWelcTitle: {
     color: '#FFFFFF',
     fontSize: 18,
+    fontFamily: 'Sansation-Regular',
+    textAlign: 'center',
+    fontStyle: 'italic',
+    width: '60%',
+  },
+  serenityBloomWelcStarTitle: {
+    color: '#FFFFFF',
+    fontSize: 16,
     fontFamily: 'Sansation-Regular',
     textAlign: 'center',
     fontStyle: 'italic',
@@ -388,6 +414,15 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontStyle: 'italic',
     width: '60%',
+    marginTop: 8,
+  },
+  serenityBloomWelcStarSubtitle: {
+    color: '#FFFFFF',
+    fontSize: 14,
+    fontFamily: 'Sansation-Regular',
+    textAlign: 'center',
+    fontStyle: 'italic',
+    width: '70%',
     marginTop: 8,
   },
   serenityBloomQuestTxt: {

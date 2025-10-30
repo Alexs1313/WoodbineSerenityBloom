@@ -146,7 +146,11 @@ const SenerityBloomSetup = () => {
                 <Text style={styles.serenitywelcsubtitle}>Share App</Text>
                 <TouchableOpacity
                   activeOpacity={0.7}
-                  onPress={() => Linking.openURL('')}
+                  onPress={() =>
+                    Linking.openURL(
+                      'https://apps.apple.com/us/app/woodbine-serenity-bloom/id6754678449',
+                    )
+                  }
                 >
                   <Image
                     source={require('../../assets/images/serenityshr.png')}

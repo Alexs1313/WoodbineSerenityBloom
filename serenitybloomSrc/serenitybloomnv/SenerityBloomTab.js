@@ -1,10 +1,5 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Image, StyleSheet, View } from 'react-native';
-import InnerCrovvnMain from '../serenitybloomsc/SenerityBloomHome';
-import InnerCrovvnMeditations from '../serenitybloomsc/SenerityBloomMed';
-import InnerCrovvnArticles from '../serenitybloomsc/SenerityBloomStats';
-import InnerCrovvnGallery from '../serenitybloomsc/SenerityBloomBreathing';
-import InnerCrovvnSettings from '../serenitybloomsc/SenerityBloomSetup';
 import SenerityBloomSetup from '../serenitybloomsc/SenerityBloomSetup';
 import SenerityBloomMed from '../serenitybloomsc/SenerityBloomMed';
 import SenerityBloomBreathing from '../serenitybloomsc/SenerityBloomBreathing';

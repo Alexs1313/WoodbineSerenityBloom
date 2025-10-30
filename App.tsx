@@ -18,7 +18,7 @@ const App = () => {
     <NavigationContainer>
       <ContextProvider>
         {isLoading ? <SerenityBloomLoader /> : <SenerityBloomStack />}
-        <Toast position="top" topOffset={50} />
+        <Toast position="top" topOffset={55} />
       </ContextProvider>
     </NavigationContainer>
   );

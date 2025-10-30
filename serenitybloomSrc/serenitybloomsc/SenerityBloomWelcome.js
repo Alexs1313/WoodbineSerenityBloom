@@ -24,7 +24,12 @@ const SenerityBloomWelcome = () => {
         showsVerticalScrollIndicator={false}
       >
         <View
-          style={{ justifyContent: 'flex-end', alignItems: 'center', flex: 1 }}
+          style={{
+            justifyContent: 'flex-end',
+            alignItems: 'center',
+            flex: 1,
+            paddingBottom: 40,
+          }}
         >
           {serenityBloomIdx === 0 && (
             <Image
@@ -101,7 +106,6 @@ const styles = StyleSheet.create({
   serenitybackground: {
     flex: 1,
     width: '100%',
-    paddingBottom: 50,
   },
   serenitywelccont: {
     width: '90%',
@@ -130,7 +134,7 @@ const styles = StyleSheet.create({
   },
   serenitywelcsubtitle: {
     color: '#FFFFFF',
-    fontSize: 20,
+    fontSize: 17,
     fontWeight: '400',
     fontFamily: 'Sansation-Regular',
     textAlign: 'center',

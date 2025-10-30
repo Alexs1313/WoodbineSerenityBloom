@@ -74,7 +74,10 @@ const SenerityBloomBreathCard = ({ article }) => {
           </>
         ) : (
           <Text
-            style={[styles.serenitywelcsubtitle, { height: 70, marginTop: 10 }]}
+            style={[
+              styles.serenitywelcsubtitle,
+              { minHeight: 70, marginTop: 10 },
+            ]}
           >
             {article.seneritydesc}
           </Text>
