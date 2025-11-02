@@ -1,7 +1,7 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import SenerityBloomTab from './SenerityBloomTab';
-import SenerityBloomMeditationDetails from '../serenitybloomsc/SenerityBloomMeditationDetails';
-import SenerityBloomWelcome from '../serenitybloomsc/SenerityBloomWelcome';
+import SenerityBloomMeditationDetails from '../srntblms/SenerityBloomMeditationDetails';
+import SenerityBloomWelcome from '../srntblms/SenerityBloomWelcome';
 
 const Stack = createStackNavigator();
 
@@ -9,8 +9,8 @@ const SenerityBloomStack = () => {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen
-        name="SenerityBloomWelcome"
-        component={SenerityBloomWelcome}
+        name="SenerityBloomWelcom"
+        component={SenerityBloomWelcom}
       />
       <Stack.Screen name="SenerityBloomTab" component={SenerityBloomTab} />
       <Stack.Screen

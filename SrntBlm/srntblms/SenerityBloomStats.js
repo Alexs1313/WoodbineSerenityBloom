@@ -1,5 +1,5 @@
 import { useCallback } from 'react';
-import { useStore } from '../serenitybloomst/serenitybloomctxt';
+import { useStore } from '../srntblmst/serenitybloomctxt';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useFocusEffect } from '@react-navigation/native';
 import {
@@ -10,8 +10,8 @@ import {
   Text,
   View,
 } from 'react-native';
-import { serenitybloommedt } from '../serenitybloomdta/serenitybloommedt';
-import { serenitybloombreathing } from '../serenitybloomdta/serenitybloombreathing';
+import { serenitybloommedt } from '../srntblmd/serenitybloommedt';
+import { serenitybloombreathing } from '../srntblmd/serenitybloombreathing';
 
 const moodDetails = {
   A: {

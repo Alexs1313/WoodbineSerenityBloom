@@ -10,11 +10,11 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { useStore } from '../serenitybloomst/serenitybloomctxt';
+import { useStore } from '../srntblmst/serenitybloomctxt';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useState } from 'react';
 import { BlurView } from '@react-native-community/blur';
-import SerenityBloomLayout from '../serenitybloomcp/SerenityBloomLayout';
+import SerenityBloomLayout from '../srntblmcm/SerenityBloomLayout';
 
 const SenerityBloomSetup = () => {
   const [isVisibleModal, setIsVisibleModal] = useState(false);

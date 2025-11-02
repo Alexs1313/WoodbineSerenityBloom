@@ -11,8 +11,8 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { useStore } from '../serenitybloomst/serenitybloomctxt';
-import SerenityBloomLayout from '../serenitybloomcp/SerenityBloomLayout';
+import { useStore } from '../srntblmst/serenitybloomctxt';
+import SerenityBloomLayout from '../srntblmcm/SerenityBloomLayout';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const SenerityBloomMeditationDetails = ({ route }) => {
