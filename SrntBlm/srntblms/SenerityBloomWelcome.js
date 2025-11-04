@@ -1,6 +1,7 @@
 import {
   Image,
   ImageBackground,
+  Platform,
   ScrollView,
   StyleSheet,
   Text,
@@ -52,7 +53,17 @@ const SenerityBloomWelcome = () => {
 
           <View style={styles.serenitywelccont}>
             <Text style={styles.serenitywelctitle}>
-              {serenityBloomIdx === 0 && 'Welcome to Woodbine Serenity Bloom'}
+              {Platform.OS === 'ios' ? (
+                <>
+                  {serenityBloomIdx === 0 &&
+                    'Welcome to Woodbine Serenity Bloom'}
+                </>
+              ) : (
+                <>
+                  {serenityBloomIdx === 0 &&
+                    'Welcome to Serenity of Luxury Bloom'}
+                </>
+              )}
               {serenityBloomIdx === 1 && 'Daily Check-Ins'}
               {serenityBloomIdx === 2 && 'Personalized Guidance'}
               {serenityBloomIdx === 3 && 'Begin Your Journey'}
@@ -64,8 +75,17 @@ const SenerityBloomWelcome = () => {
                 'Answer four simple questions each day to explore your emotional state and track your personal bloom.'}
               {serenityBloomIdx === 2 &&
                 'Receive advice, breathing exercises, and meditations tailored to your current mood.'}
-              {serenityBloomIdx === 3 &&
-                'Start your mindful practice and let Woodbine Serenity Bloom guide you toward inner calm.'}
+              {Platform.OS === 'ios' ? (
+                <>
+                  {serenityBloomIdx === 3 &&
+                    'Start your mindful practice and let Woodbine Serenity Bloom guide you toward inner calm.'}
+                </>
+              ) : (
+                <>
+                  {serenityBloomIdx === 3 &&
+                    'Start your mindful practice and let Serenity of Luxury Bloom guide you toward inner calm.'}
+                </>
+              )}
             </Text>
           </View>
 
@@ -121,7 +141,7 @@ const styles = StyleSheet.create({
   },
   serenitybtntext: {
     color: '#FFFFFF',
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: '700',
   },
   serenitywelctitle: {

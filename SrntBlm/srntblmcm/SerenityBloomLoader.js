@@ -6,6 +6,7 @@ import {
   StyleSheet,
   ImageBackground,
   ScrollView,
+  Platform,
 } from 'react-native';
 
 const SerenityBloomLoader = () => {
@@ -169,10 +170,17 @@ const SerenityBloomLoader = () => {
         showsVerticalScrollIndicator={false}
       >
         <View style={styles.loadercnt}>
-          <Image
-            source={require('../../assets/images/serenityloader.png')}
-            style={{ bottom: 50 }}
-          />
+          {Platform.OS === 'ios' ? (
+            <Image
+              source={require('../../assets/images/serenityloader.png')}
+              style={{ bottom: 50 }}
+            />
+          ) : (
+            <Image
+              source={require('../../assets/images/icon.png')}
+              style={{ bottom: 50, width: 210, height: 210, borderRadius: 12 }}
+            />
+          )}
         </View>
 
         <View style={styles.loaderwrap}>

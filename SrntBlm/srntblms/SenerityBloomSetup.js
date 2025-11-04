@@ -15,9 +15,11 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useState } from 'react';
 import { BlurView } from '@react-native-community/blur';
 import SerenityBloomLayout from '../srntblmcm/SerenityBloomLayout';
+import { useNavigation } from '@react-navigation/native';
 
 const SenerityBloomSetup = () => {
   const [isVisibleModal, setIsVisibleModal] = useState(false);
+  const navigation = useNavigation();
   const {
     isOnMeditationsMusic,
     setIsOnMeditationsMusic,
@@ -75,6 +77,7 @@ const SenerityBloomSetup = () => {
       setOpenedMeditationsCount([]);
       setMoodStats({ A: 0, B: 0, C: 0, D: 0 });
       setQuizResult(null);
+      navigation.navigate('SenerityBloomWelcome');
     } catch (err) {
       console.log('Failed to reset stats', err);
     }
@@ -86,7 +89,7 @@ const SenerityBloomSetup = () => {
         style={[
           styles.serenitycnt,
           Platform.OS === 'android' &&
-            isVisibleModal && { filter: 'blur(2px)' },
+            isVisibleModal && { filter: 'blur(12px)' },
         ]}
       >
         <View style={styles.serenitywelccont}>
@@ -247,7 +250,7 @@ const styles = StyleSheet.create({
   },
   serenitybtntext: {
     color: '#FFFFFF',
-    fontSize: 18,
+    fontSize: 17,
     fontWeight: '700',
   },
   serenitywelctitle: {

@@ -1,30 +1,33 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useState } from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useFocusEffect } from '@react-navigation/native';
 
 const SenerityBloomBreathCard = ({ article }) => {
   const [showBreathingArtDetails, setShowBreathingArtDetails] = useState(false);
   const [opened, setOpened] = useState(false);
 
-  useEffect(() => {
-    const checkOpened = async () => {
-      try {
-        const openedSessions = await AsyncStorage.getItem(
-          'openedBreathingSessions',
-        );
-        if (openedSessions) {
-          const parsed = JSON.parse(openedSessions);
-          if (parsed.includes(article.id)) {
-            setOpened(true);
-            setShowBreathingArtDetails(true);
+  useFocusEffect(
+    useCallback(() => {
+      const checkOpened = async () => {
+        try {
+          const openedSessions = await AsyncStorage.getItem(
+            'openedBreathingSessions',
+          );
+          if (openedSessions) {
+            const parsed = JSON.parse(openedSessions);
+            if (parsed.includes(article.id)) {
+              setOpened(true);
+              setShowBreathingArtDetails(true);
+            }
           }
+        } catch (err) {
+          console.log('Error reading breathing sessions', err);
         }
-      } catch (err) {
-        console.log('Error reading breathing sessions', err);
-      }
-    };
-    checkOpened();
-  }, [article.id]);
+      };
+      checkOpened();
+    }, [article.id]),
+  );
 
   const handleOpenSession = async () => {
     setShowBreathingArtDetails(true);

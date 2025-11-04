@@ -9,8 +9,8 @@ const SenerityBloomStack = () => {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen
-        name="SenerityBloomWelcom"
-        component={SenerityBloomWelcom}
+        name="SenerityBloomWelcome"
+        component={SenerityBloomWelcome}
       />
       <Stack.Screen name="SenerityBloomTab" component={SenerityBloomTab} />
       <Stack.Screen
