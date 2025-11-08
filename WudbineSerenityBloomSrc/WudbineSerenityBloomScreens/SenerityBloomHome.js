@@ -1,5 +1,5 @@
 import { useCallback, useState } from 'react';
-import { useStore } from '../srntblmst/serenitybloomctxt';
+import { useStore } from '../WudbineSerenityBloomStore/serenitybloomctxt';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useFocusEffect } from '@react-navigation/native';
 import {
@@ -11,12 +11,12 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { serenitybloommedt } from '../srntblmd/serenitybloommedt';
-import { serenitybloombreathing } from '../srntblmd/serenitybloombreathing';
-import SerenityBloomCard from '../srntblmcm/SerenityBloomCard';
-import SenerityBloomBreathCard from '../srntblmcm/SenerityBloomBreathCard';
-import { serenityquizques } from '../srntblmd/serenityquizques';
-import SerenityBloomLayout from '../srntblmcm/SerenityBloomLayout';
+import { serenitybloommedt } from '../WudbineSerenityBloomData/serenitybloommedt';
+import { serenitybloombreathing } from '../WudbineSerenityBloomData/serenitybloombreathing';
+import SerenityBloomCard from '../WudbineSerenityBloomComponents/SerenityBloomCard';
+import SenerityBloomBreathCard from '../WudbineSerenityBloomComponents/SenerityBloomBreathCard';
+import { serenityquizques } from '../WudbineSerenityBloomData/serenityquizques';
+import SerenityBloomLayout from '../WudbineSerenityBloomComponents/SerenityBloomLayout';
 
 const moodDetails = {
   A: {

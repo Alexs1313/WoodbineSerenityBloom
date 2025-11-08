@@ -1,7 +1,7 @@
 import { Dimensions, StyleSheet, View } from 'react-native';
-import SenerityBloomBreathCard from '../srntblmcm/SenerityBloomBreathCard';
-import { serenitybloombreathing } from '../srntblmd/serenitybloombreathing';
-import SerenityBloomLayout from '../srntblmcm/SerenityBloomLayout';
+import SenerityBloomBreathCard from '../WudbineSerenityBloomComponents/SenerityBloomBreathCard';
+import { serenitybloombreathing } from '../WudbineSerenityBloomData/serenitybloombreathing';
+import SerenityBloomLayout from '../WudbineSerenityBloomComponents/SerenityBloomLayout';
 
 const { height } = Dimensions.get('window');
 

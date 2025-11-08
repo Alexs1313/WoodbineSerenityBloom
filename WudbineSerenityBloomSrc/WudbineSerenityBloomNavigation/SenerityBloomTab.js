@@ -1,10 +1,10 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Image, StyleSheet, View } from 'react-native';
-import SenerityBloomSetup from '../srntblms/SenerityBloomSetup';
-import SenerityBloomMed from '../srntblms/SenerityBloomMed';
-import SenerityBloomBreathing from '../srntblms/SenerityBloomBreathing';
-import SenerityBloomHome from '../srntblms/SenerityBloomHome';
-import SenerityBloomStats from '../srntblms/SenerityBloomStats';
+import SenerityBloomSetup from '../WudbineSerenityBloomScreens/SenerityBloomSetup';
+import SenerityBloomMed from '../WudbineSerenityBloomScreens/SenerityBloomMed';
+import SenerityBloomBreathing from '../WudbineSerenityBloomScreens/SenerityBloomBreathing';
+import SenerityBloomHome from '../WudbineSerenityBloomScreens/SenerityBloomHome';
+import SenerityBloomStats from '../WudbineSerenityBloomScreens/SenerityBloomStats';
 
 const Tab = createBottomTabNavigator();
 

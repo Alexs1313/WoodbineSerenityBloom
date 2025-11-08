@@ -1,23 +1,23 @@
 import { NavigationContainer } from '@react-navigation/native';
 import Toast from 'react-native-toast-message';
-import { ContextProvider } from './SrntBlm/srntblmst/serenitybloomctxt';
-import SerenityBloomLoader from './SrntBlm/srntblmcm/SerenityBloomLoader';
+import { ContextProvider } from './WudbineSerenityBloomSrc/WudbineSerenityBloomStore/serenitybloomctxt';
+import SerenityBloomLoader from './WudbineSerenityBloomSrc/WudbineSerenityBloomComponents/SerenityBloomLoader';
 import { useEffect, useState } from 'react';
-import SenerityBloomStack from './SrntBlm/srntblmn/SenerityBloomStack';
+import SenerityBloomStack from './WudbineSerenityBloomSrc/WudbineSerenityBloomNavigation/SenerityBloomStack';
 
 const App = () => {
-  const [showWelcomeLoader, setShowWelcomeLoader] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
-      setShowWelcomeLoader(false);
+      setIsLoading(false);
     }, 5300);
   }, []);
 
   return (
     <NavigationContainer>
       <ContextProvider>
-        {showWelcomeLoader ? <SerenityBloomLoader /> : <SenerityBloomStack />}
+        {isLoading ? <SerenityBloomLoader /> : <SenerityBloomStack />}
         <Toast position="top" topOffset={53} />
       </ContextProvider>
     </NavigationContainer>
