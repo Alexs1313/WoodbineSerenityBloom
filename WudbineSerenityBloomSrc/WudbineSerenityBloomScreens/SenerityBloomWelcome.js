@@ -56,7 +56,7 @@ const SenerityBloomWelcome = () => {
               {Platform.OS === 'ios' ? (
                 <>
                   {serenityBloomIdx === 0 &&
-                    'Welcome to Woodbine Serenity Bloom'}
+                    'Welcome to Wudbine Serenity Bloom'}
                 </>
               ) : (
                 <>
