@@ -1,19 +1,19 @@
 workflows:
   ios-workflow:
-    name: Woodbine Serenity Bloom
+    name: Wudbine Serenity Bloom
     max_build_duration: 120
     instance_type: mac_mini_m2
     integrations:
-      app_store_connect: WoodbineSerenityBloomAPIKey
+      app_store_connect: WudbineSerenityBloomNewAPIKey
     environment:
       ios_signing:
         distribution_type: app_store
-        bundle_identifier: com.WoodbineSerenityBloom
+        bundle_identifier: com.WoodbineSerenityBloomNew
       vars:
-        BUNDLE_ID: com.WoodbineSerenityBloom
+        BUNDLE_ID: com.WoodbineSerenityBloomNew
         XCODE_WORKSPACE: WoodbineSerenityBloom.xcworkspace
         XCODE_SCHEME: WoodbineSerenityBloom
-        APP_STORE_APPLE_ID: 6754678449
+        APP_STORE_APPLE_ID: 6755637557
     scripts:
       - name: Install npm dependencies
         script: |
@@ -44,4 +44,4 @@ workflows:
       app_store_connect:
         auth: integration
         submit_to_app_store: true
-        copyright: Woodbine Serenity Bloom 2025
+        copyright: Wudbine Serenity Bloom 2025
