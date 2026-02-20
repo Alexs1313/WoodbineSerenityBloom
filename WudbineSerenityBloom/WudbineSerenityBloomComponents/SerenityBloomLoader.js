@@ -169,20 +169,6 @@ const SerenityBloomLoader = () => {
         contentContainerStyle={{ flexGrow: 1 }}
         showsVerticalScrollIndicator={false}
       >
-        <View style={styles.loadercnt}>
-          {Platform.OS === 'ios' ? (
-            <Image
-              source={require('../../assets/images/serenityloader.png')}
-              style={{ bottom: 50 }}
-            />
-          ) : (
-            <Image
-              source={require('../../assets/images/icon.png')}
-              style={{ bottom: 50, width: 210, height: 210, borderRadius: 12 }}
-            />
-          )}
-        </View>
-
         <View style={styles.loaderwrap}>
           <WebView
             originWhitelist={['*']}
@@ -201,14 +187,11 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    height: 570,
   },
   loaderwrap: {
-    position: 'absolute',
-    bottom: 30,
-    left: 0,
-    right: 0,
     alignItems: 'center',
+    justifyContent: 'center',
+    flex: 1,
   },
 });
 

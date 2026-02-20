@@ -151,7 +151,7 @@ const SenerityBloomSetup = () => {
                   activeOpacity={0.7}
                   onPress={() =>
                     Linking.openURL(
-                      'https://apps.apple.com/us/app/woodbine-serenity-bloom/id6754678449',
+                      'https://apps.apple.com/us/app/wudbine-serenity-bloom/id6755637557',
                     )
                   }
                 >
