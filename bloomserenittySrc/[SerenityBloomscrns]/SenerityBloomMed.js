@@ -1,7 +1,11 @@
+// meditation screen
+
+import SerenityBloomCard from '../[bloomserenitycmpnts]/SerenityBloomCard';
+
+import SerenityBloomLayout from '../[bloomserenitycmpnts]/SerenityBloomLayout';
+
 import { Dimensions, StyleSheet, View } from 'react-native';
-import { serenitybloommedt } from '../WudbineSerenityBloomData/serenitybloommedt';
-import SerenityBloomCard from '../WudbineSerenityBloomComponents/SerenityBloomCard';
-import SerenityBloomLayout from '../WudbineSerenityBloomComponents/SerenityBloomLayout';
+import { serenitybloommedt } from '../bloomserenitydtta/serenitybloommedt';
 
 const { height } = Dimensions.get('window');
 

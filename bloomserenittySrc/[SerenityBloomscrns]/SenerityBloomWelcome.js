@@ -1,3 +1,5 @@
+// welcome screen
+
 import {
   Image,
   ImageBackground,
@@ -35,20 +37,20 @@ const SenerityBloomWelcome = () => {
           {serenityBloomIdx === 0 && (
             <Image
               source={require('../../assets/images/serenityonb1.png')}
-              style={{ left: -20 }}
+              style={{}}
             />
           )}
           {serenityBloomIdx === 1 && (
             <Image source={require('../../assets/images/serenityonb2.png')} />
           )}
           {serenityBloomIdx === 2 && (
-            <Image
-              source={require('../../assets/images/serenityonb3.png')}
-              style={{ top: 60 }}
-            />
+            <Image source={require('../../assets/images/serenityonb3.png')} />
           )}
           {serenityBloomIdx === 3 && (
             <Image source={require('../../assets/images/serenityonb4.png')} />
+          )}
+          {serenityBloomIdx === 4 && (
+            <Image source={require('../../assets/images/serenityonb5.png')} />
           )}
 
           <View style={styles.serenitywelccont}>
@@ -56,7 +58,7 @@ const SenerityBloomWelcome = () => {
               {Platform.OS === 'ios' ? (
                 <>
                   {serenityBloomIdx === 0 &&
-                    'Welcome to Wudbine Serenity Bloom'}
+                    'Welcome to Woobbine Bloom Serenity'}
                 </>
               ) : (
                 <>
@@ -67,6 +69,7 @@ const SenerityBloomWelcome = () => {
               {serenityBloomIdx === 1 && 'Daily Check-Ins'}
               {serenityBloomIdx === 2 && 'Personalized Guidance'}
               {serenityBloomIdx === 3 && 'Begin Your Journey'}
+              {serenityBloomIdx === 4 && 'Calm Your Mind Through Reading'}
             </Text>
             <Text style={styles.serenitywelcsubtitle}>
               {serenityBloomIdx === 0 &&
@@ -78,7 +81,7 @@ const SenerityBloomWelcome = () => {
               {Platform.OS === 'ios' ? (
                 <>
                   {serenityBloomIdx === 3 &&
-                    'Start your mindful practice and let Woodbine Serenity Bloom guide you toward inner calm.'}
+                    'Start your mindful practice and let Woobbine Bloom Serenity guide you toward inner calm.'}
                 </>
               ) : (
                 <>
@@ -86,13 +89,15 @@ const SenerityBloomWelcome = () => {
                     'Start your mindful practice and let Serenity of Luxury Bloom guide you toward inner calm.'}
                 </>
               )}
+              {serenityBloomIdx === 4 &&
+                'Explore simple articles about meditation and breathing to support daily balance.'}
             </Text>
           </View>
 
           <TouchableOpacity
             activeOpacity={0.7}
             onPress={() => {
-              if (serenityBloomIdx < 3) {
+              if (serenityBloomIdx < 4) {
                 setSerenityBloomIdx(serenityBloomIdx + 1);
               } else {
                 navigation.replace('SenerityBloomTab');
@@ -112,7 +117,8 @@ const SenerityBloomWelcome = () => {
                 {serenityBloomIdx === 0 && 'Proceed'}
                 {serenityBloomIdx === 1 && 'Proceed'}
                 {serenityBloomIdx === 2 && 'Next'}
-                {serenityBloomIdx === 3 && 'Start'}
+                {serenityBloomIdx === 3 && 'Next'}
+                {serenityBloomIdx === 4 && 'Start'}
               </Text>
             </ImageBackground>
           </TouchableOpacity>
@@ -138,6 +144,8 @@ const styles = StyleSheet.create({
     paddingBottom: 60,
     borderWidth: 1,
     borderColor: 'rgba(255, 255, 255, 0.25)',
+    minHeight: 269,
+    justifyContent: 'center',
   },
   serenitybtntext: {
     color: '#FFFFFF',
@@ -145,7 +153,7 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
   serenitywelctitle: {
-    color: '#FFFFFF',
+    color: '#F4F7F6',
     fontSize: 24,
     fontWeight: '700',
     marginBottom: 20,
@@ -153,11 +161,12 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   serenitywelcsubtitle: {
-    color: '#FFFFFF',
-    fontSize: 17,
+    color: '#F4F7F6',
+    fontSize: 20,
     fontWeight: '400',
     fontFamily: 'Sansation-Regular',
     textAlign: 'center',
+    lineHeight: 25,
   },
 });
 

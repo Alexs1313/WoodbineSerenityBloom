@@ -1,3 +1,8 @@
+// setup screen
+
+import { BlurView } from '@react-native-community/blur';
+import SerenityBloomLayout from '../[bloomserenitycmpnts]/SerenityBloomLayout';
+import { useNavigation } from '@react-navigation/native';
 import Toast from 'react-native-toast-message';
 import {
   Image,
@@ -10,12 +15,9 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { useStore } from '../WudbineSerenityBloomStore/serenitybloomctxt';
+import { useStore } from '../bloomstorecntx/serenitybloomctxt';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useState } from 'react';
-import { BlurView } from '@react-native-community/blur';
-import SerenityBloomLayout from '../WudbineSerenityBloomComponents/SerenityBloomLayout';
-import { useNavigation } from '@react-navigation/native';
 
 const SenerityBloomSetup = () => {
   const [isVisibleModal, setIsVisibleModal] = useState(false);
@@ -34,7 +36,7 @@ const SenerityBloomSetup = () => {
   const toggleMeditationsBgMusic = async value => {
     if (isOnSerenityNtf) {
       Toast.show({
-        text1: !isOnMeditationsMusic ? 'Music turned on!' : 'Music turned off!',
+        text1: !isOnMeditationsMusic ? 'Music turned on' : 'Music turned off',
       });
     }
     try {
@@ -51,8 +53,8 @@ const SenerityBloomSetup = () => {
   const toggleCrovvnNotifications = async value => {
     Toast.show({
       text1: !isOnSerenityNtf
-        ? 'Notifications turned on!'
-        : 'Notifications turned off!',
+        ? 'Notifications turned on'
+        : 'Notifications turned off',
     });
 
     try {
@@ -151,7 +153,7 @@ const SenerityBloomSetup = () => {
                   activeOpacity={0.7}
                   onPress={() =>
                     Linking.openURL(
-                      'https://apps.apple.com/us/app/wudbine-serenity-bloom/id6755637557',
+                      'https://apps.apple.com/us/app/woobbine-bloom-serenity/id6760403167',
                     )
                   }
                 >

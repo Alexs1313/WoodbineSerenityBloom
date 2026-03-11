@@ -1,9 +1,11 @@
+import SenerityBloomStack from './bloomserenittySrc/bloomserenitynavigtr/SenerityBloomStack';
 import { NavigationContainer } from '@react-navigation/native';
+
 import Toast from 'react-native-toast-message';
-import { ContextProvider } from './WudbineSerenityBloom/WudbineSerenityBloomStore/serenitybloomctxt';
-import SerenityBloomLoader from './WudbineSerenityBloom/WudbineSerenityBloomComponents/SerenityBloomLoader';
+
+import { ContextProvider } from './bloomserenittySrc/bloomstorecntx/serenitybloomctxt';
+import SerenityBloomLoader from './bloomserenittySrc/[bloomserenitycmpnts]/SerenityBloomLoader';
 import { useEffect, useState } from 'react';
-import SenerityBloomStack from './WudbineSerenityBloom/WudbineSerenityBloomNavigation/SenerityBloomStack';
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);

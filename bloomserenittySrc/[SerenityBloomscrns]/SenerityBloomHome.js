@@ -1,5 +1,11 @@
+// home screen
+import SenerityBloomBreathCard from '../[bloomserenitycmpnts]/SenerityBloomBreathCard';
+import { serenityquizques } from '../bloomserenitydtta/serenityquizques';
+import SerenityBloomLayout from '../[bloomserenitycmpnts]/SerenityBloomLayout';
 import { useCallback, useState } from 'react';
-import { useStore } from '../WudbineSerenityBloomStore/serenitybloomctxt';
+
+import { useStore } from '../bloomstorecntx/serenitybloomctxt';
+
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useFocusEffect } from '@react-navigation/native';
 import {
@@ -11,12 +17,9 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { serenitybloommedt } from '../WudbineSerenityBloomData/serenitybloommedt';
-import { serenitybloombreathing } from '../WudbineSerenityBloomData/serenitybloombreathing';
-import SerenityBloomCard from '../WudbineSerenityBloomComponents/SerenityBloomCard';
-import SenerityBloomBreathCard from '../WudbineSerenityBloomComponents/SenerityBloomBreathCard';
-import { serenityquizques } from '../WudbineSerenityBloomData/serenityquizques';
-import SerenityBloomLayout from '../WudbineSerenityBloomComponents/SerenityBloomLayout';
+import { serenitybloommedt } from '../bloomserenitydtta/serenitybloommedt';
+import { serenitybloombreathing } from '../bloomserenitydtta/serenitybloombreathing';
+import SerenityBloomCard from '../[bloomserenitycmpnts]/SerenityBloomCard';
 
 const moodDetails = {
   A: {
@@ -47,7 +50,7 @@ const moodDetails = {
   },
   D: {
     label: 'Tense',
-    img: require('../../assets/images/serenitymood4.png'),
+    img: require('../../assets/images/serenityispstarmood.png'),
     description: 'You feel light and inspired — your energy shines today.',
     advice: 'Share this warmth: smile at someone or do one small kind thing.',
     meditation: serenitybloommedt[3],

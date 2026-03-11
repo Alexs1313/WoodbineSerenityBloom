@@ -1,7 +1,9 @@
+// breathing screen
+
+import { serenitybloombreathing } from '../bloomserenitydtta/serenitybloombreathing';
+import SerenityBloomLayout from '../[bloomserenitycmpnts]/SerenityBloomLayout';
 import { Dimensions, StyleSheet, View } from 'react-native';
-import SenerityBloomBreathCard from '../WudbineSerenityBloomComponents/SenerityBloomBreathCard';
-import { serenitybloombreathing } from '../WudbineSerenityBloomData/serenitybloombreathing';
-import SerenityBloomLayout from '../WudbineSerenityBloomComponents/SerenityBloomLayout';
+import SenerityBloomBreathCard from '../[bloomserenitycmpnts]/SenerityBloomBreathCard';
 
 const { height } = Dimensions.get('window');
 

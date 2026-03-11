@@ -1,7 +1,9 @@
+// stack navigation
+
+import SenerityBloomMeditationDetails from '../[SerenityBloomscrns]/SenerityBloomMeditationDetails';
+import SenerityBloomWelcome from '../[SerenityBloomscrns]/SenerityBloomWelcome';
 import { createStackNavigator } from '@react-navigation/stack';
 import SenerityBloomTab from './SenerityBloomTab';
-import SenerityBloomMeditationDetails from '../WudbineSerenityBloomScreens/SenerityBloomMeditationDetails';
-import SenerityBloomWelcome from '../WudbineSerenityBloomScreens/SenerityBloomWelcome';
 
 const Stack = createStackNavigator();
 

@@ -1,6 +1,13 @@
+// stats screen
+
+import { serenitybloommedt } from '../bloomserenitydtta/serenitybloommedt';
+import { serenitybloombreathing } from '../bloomserenitydtta/serenitybloombreathing';
+
 import { useCallback } from 'react';
-import { useStore } from '../WudbineSerenityBloomStore/serenitybloomctxt';
+import { useStore } from '../bloomstorecntx/serenitybloomctxt';
+
 import AsyncStorage from '@react-native-async-storage/async-storage';
+
 import { useFocusEffect } from '@react-navigation/native';
 import {
   Image,
@@ -10,8 +17,6 @@ import {
   Text,
   View,
 } from 'react-native';
-import { serenitybloommedt } from '../WudbineSerenityBloomData/serenitybloommedt';
-import { serenitybloombreathing } from '../WudbineSerenityBloomData/serenitybloombreathing';
 
 const moodDetails = {
   A: {
@@ -42,13 +47,20 @@ const moodDetails = {
   },
   D: {
     label: 'Tense',
-    img: require('../../assets/images/serenitymood4.png'),
+    img: require('../../assets/images/serenityispstarmood.png'),
     description: 'You feel light and inspired — your energy shines today.',
     advice: 'Share this warmth: smile at someone or do one small kind thing.',
     meditation: serenitybloommedt[3],
     breathing: [serenitybloombreathing[6], serenitybloombreathing[7]],
   },
 };
+
+const normalizeMoodStats = rawStats => ({
+  A: Number(rawStats?.A) || 0,
+  B: Number(rawStats?.B) || 0,
+  C: Number(rawStats?.C) || 0,
+  D: Number(rawStats?.D) || 0,
+});
 
 const SenerityBloomStats = () => {
   const { moodStats, setMoodStats } = useStore();
@@ -96,7 +108,7 @@ const SenerityBloomStats = () => {
 
   const loadSerenityBloomMoodStats = async () => {
     const stats = await AsyncStorage.getItem('moodStats');
-    if (stats) setMoodStats(JSON.parse(stats));
+    if (stats) setMoodStats(normalizeMoodStats(JSON.parse(stats)));
   };
 
   const renderMeditationProgressBar = () => {
@@ -160,34 +172,41 @@ const SenerityBloomStats = () => {
   };
 
   const renderProgressBar = () => {
-    const total = Object.values(moodStats).reduce((a, b) => a + b, 0);
+    const normalizedMoodStats = normalizeMoodStats(moodStats);
+    const total = Object.values(normalizedMoodStats).reduce(
+      (sum, value) => sum + value,
+      0,
+    );
 
-    const getWidth = type => `${(moodStats[type] / total) * 100}%`;
+    const getWidth = type => {
+      if (!total) return '0%';
+      return `${(normalizedMoodStats[type] / total) * 100}%`;
+    };
 
     return (
       <View style={styles.progressBarContainer}>
         <View
           style={[
             styles.progressSegment,
-            { backgroundColor: '#FFD700', width: getWidth('A') },
+            { backgroundColor: '#FFEAEA', width: getWidth('A') },
           ]}
         />
         <View
           style={[
             styles.progressSegment,
-            { backgroundColor: '#00CED1', width: getWidth('B') },
+            { backgroundColor: '#FFB3B3', width: getWidth('B') },
           ]}
         />
         <View
           style={[
             styles.progressSegment,
-            { backgroundColor: '#ADFF2F', width: getWidth('C') },
+            { backgroundColor: '#FF0000', width: getWidth('C') },
           ]}
         />
         <View
           style={[
             styles.progressSegment,
-            { backgroundColor: '#FF6347', width: getWidth('D') },
+            { backgroundColor: '#FF6666', width: getWidth('D') },
           ]}
         />
       </View>
@@ -195,7 +214,11 @@ const SenerityBloomStats = () => {
   };
 
   const renderRecommendations = () => {
-    const total = Object.values(moodStats).reduce((a, b) => a + b, 0);
+    const normalizedMoodStats = normalizeMoodStats(moodStats);
+    const total = Object.values(normalizedMoodStats).reduce(
+      (sum, value) => sum + value,
+      0,
+    );
 
     return (
       <View style={{ alignItems: 'center', width: '100%' }}>
@@ -218,9 +241,7 @@ const SenerityBloomStats = () => {
             <View key={key} style={styles.moodStatRow}>
               <Image source={moodDetails[key].img} style={styles.moodIcon} />
 
-              <Text style={styles.moodCount}>
-                x {moodStats?.[key] ? moodStats[key] : 0}
-              </Text>
+              <Text style={styles.moodCount}>x {normalizedMoodStats[key]}</Text>
             </View>
           ))}
         </View>
@@ -235,7 +256,7 @@ const SenerityBloomStats = () => {
     >
       <View style={{ height: 80, backgroundColor: '#B80019' }} />
       <ScrollView
-        contentContainerStyle={{ flexGrow: 1 }}
+        contentContainerStyle={{ flexGrow: 1, paddingBottom: 110 }}
         showsVerticalScrollIndicator={false}
       >
         {renderRecommendations()}
@@ -245,7 +266,7 @@ const SenerityBloomStats = () => {
 };
 
 const styles = StyleSheet.create({
-  serenitycnt: { paddingBottom: 110 },
+  serenitycnt: {},
   serenitywelctitle: {
     color: '#FFFFFF',
     fontSize: 18,

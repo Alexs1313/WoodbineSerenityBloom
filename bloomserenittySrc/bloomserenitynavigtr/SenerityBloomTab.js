@@ -1,10 +1,16 @@
+// bottom tab navigation
+
+import SenerityBloomHome from '../[SerenityBloomscrns]/SenerityBloomHome';
+import SenerityBloomStats from '../[SerenityBloomscrns]/SenerityBloomStats';
+import Bloomsrntyartcles from '../[SerenityBloomscrns]/Bloomsrntyartcles';
+
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Image, StyleSheet, View } from 'react-native';
-import SenerityBloomSetup from '../WudbineSerenityBloomScreens/SenerityBloomSetup';
-import SenerityBloomMed from '../WudbineSerenityBloomScreens/SenerityBloomMed';
-import SenerityBloomBreathing from '../WudbineSerenityBloomScreens/SenerityBloomBreathing';
-import SenerityBloomHome from '../WudbineSerenityBloomScreens/SenerityBloomHome';
-import SenerityBloomStats from '../WudbineSerenityBloomScreens/SenerityBloomStats';
+
+import SenerityBloomSetup from '../[SerenityBloomscrns]/SenerityBloomSetup';
+
+import SenerityBloomMed from '../[SerenityBloomscrns]/SenerityBloomMed';
+import SenerityBloomBreathing from '../[SerenityBloomscrns]/SenerityBloomBreathing';
 
 const Tab = createBottomTabNavigator();
 
@@ -57,25 +63,6 @@ const SenerityBloomTab = () => {
         }}
       />
       <Tab.Screen
-        name="SenerityBloomStats"
-        component={SenerityBloomStats}
-        options={{
-          tabBarIcon: ({ color, focused }) => (
-            <View
-              style={[
-                styles.serenityicon,
-                focused && { borderWidth: 1, borderColor: '#FFFFFF' },
-              ]}
-            >
-              <Image
-                source={require('../../assets/images/serenitystat.png')}
-                style={{ tintColor: color }}
-              />
-            </View>
-          ),
-        }}
-      />
-      <Tab.Screen
         name="SenerityBloomBreathing"
         component={SenerityBloomBreathing}
         options={{
@@ -95,6 +82,45 @@ const SenerityBloomTab = () => {
           unmountOnBlur: true,
         }}
       />
+      <Tab.Screen
+        name="Bloomsrntyartcles"
+        component={Bloomsrntyartcles}
+        options={{
+          tabBarIcon: ({ color, focused }) => (
+            <View
+              style={[
+                styles.serenityicon,
+                focused && { borderWidth: 1, borderColor: '#FFFFFF' },
+              ]}
+            >
+              <Image
+                source={require('../../assets/images/serenityartcls.png')}
+                style={{ tintColor: color }}
+              />
+            </View>
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="SenerityBloomStats"
+        component={SenerityBloomStats}
+        options={{
+          tabBarIcon: ({ color, focused }) => (
+            <View
+              style={[
+                styles.serenityicon,
+                focused && { borderWidth: 1, borderColor: '#FFFFFF' },
+              ]}
+            >
+              <Image
+                source={require('../../assets/images/serenitystat.png')}
+                style={{ tintColor: color }}
+              />
+            </View>
+          ),
+        }}
+      />
+
       <Tab.Screen
         name="SenerityBloomSetup"
         component={SenerityBloomSetup}

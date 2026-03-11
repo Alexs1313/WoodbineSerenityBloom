@@ -1,6 +1,13 @@
+// meditation details screen
+
+import { useStore } from '../bloomstorecntx/serenitybloomctxt';
+import SerenityBloomLayout from '../[bloomserenitycmpnts]/SerenityBloomLayout';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { useFocusEffect } from '@react-navigation/native';
+
+import { useFocusEffect, useNavigation } from '@react-navigation/native';
 import Video from 'react-native-video';
+
 import Sound from 'react-native-sound';
 import {
   Alert,
@@ -11,9 +18,6 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { useStore } from '../WudbineSerenityBloomStore/serenitybloomctxt';
-import SerenityBloomLayout from '../WudbineSerenityBloomComponents/SerenityBloomLayout';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const SenerityBloomMeditationDetails = ({ route }) => {
   const article = route.params;
@@ -22,14 +26,15 @@ const SenerityBloomMeditationDetails = ({ route }) => {
   const [sound, setSound] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const { setOpenedMeditationsCount, openedMeditationsCount } = useStore();
+  const navigation = useNavigation();
 
   useFocusEffect(
     useCallback(() => {
-      markOpened();
+      serenityMarkOpened();
     }, [article]),
   );
 
-  const markOpened = async () => {
+  const serenityMarkOpened = async () => {
     try {
       const opened = Array.isArray(openedMeditationsCount)
         ? openedMeditationsCount
@@ -117,7 +122,22 @@ const SenerityBloomMeditationDetails = ({ route }) => {
           </View>
         </View>
 
-        <View style={{ gap: 20, marginTop: 20 }}>
+        <View
+          style={{
+            gap: 20,
+            marginTop: 20,
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            width: '100%',
+          }}
+        >
+          <TouchableOpacity
+            activeOpacity={0.7}
+            onPress={() => navigation.goBack()}
+          >
+            <Image source={require('../../assets/images/serenityback.png')} />
+          </TouchableOpacity>
+
           {isOnMeditationsMusic && (
             <TouchableOpacity activeOpacity={0.7} onPress={toggleSound}>
               <Image
